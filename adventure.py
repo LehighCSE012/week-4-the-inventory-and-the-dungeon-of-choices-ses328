@@ -26,7 +26,6 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
         if item:
             acquire_item(inventory, item)
             print("You found a gold coins in the room!")
-        
         if challenge_type == "none":
             print("There doesn't seem to be a challenge in this room. You move on.")
         else:
@@ -66,11 +65,12 @@ def main():
     player_health = 100
     inventory = []
     dungeon_rooms = [
-        ("A dusty old library", "key", "puzzle", ("You solved the puzzle!", "The puzzle remains unsolved.", -5)),
-        ("A narrow passage with a creaky floor", None, "trap", 
+        ("A dusty old library", "key", "puzzle",
+         ("You solved the puzzle!", "The puzzle remains unsolved.", -5)),
+        ("A narrow passage with a creaky floor", None, "trap",
             ("You skillfully avoid the trap!", "You triggered a trap!", -10)),
         ("A grand hall with a shimmering pool", "healing potion", "none", None),
-        ("A small room with a locked chest", "treasure", "puzzle", 
+        ("A small room with a locked chest", "treasure", "puzzle",
             ("You cracked the code!", "The chest remains stubbornly locked.", -5))
     ]
 
