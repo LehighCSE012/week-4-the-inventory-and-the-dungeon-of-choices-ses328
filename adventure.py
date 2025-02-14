@@ -5,7 +5,7 @@ import random
 def acquire_item(inventory,item):
     #'''Add an item to the inventory and notifies the user'''
     inventory.append(item) #add an item to the inventory
-    print(f"You aquired a {item}!")
+    print(f"You acquired a {item}!")
     return inventory
 
 def display_inventory(inventory):
