@@ -18,7 +18,7 @@ def display_inventory(inventory):
             print(f"{i}. {item}")
 
 def enter_dungeon(player_health, inventory, dungeon_rooms):
-    '''Handles dungeon exploration phase'''
+    #Handles dungeon exploration phase
     for room in dungeon_rooms:
         room_description, item, challenge_type, challenge_outcome = room
         print(f"\{room_description}")
