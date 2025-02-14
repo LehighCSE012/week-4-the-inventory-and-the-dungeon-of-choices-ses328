@@ -62,7 +62,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
     return player_health, inventory
 
 def main():
-    '''Main fuction to run the game'''
+    '''Main function to run the game'''
     player_health = 100
     inventory = []
 
@@ -78,4 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# Your code goes here
