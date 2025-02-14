@@ -3,7 +3,7 @@ Coding Assignment 3
 '''
 import random
 def acquire_item(inventory,item):
-    #Add an item to the inventory and notifies the user
+    #'''Add an item to the inventory and notifies the user'''
     inventory.append(item) #add an item to the inventory
     print(f"You aquired a {item}!")
     return inventory
@@ -42,8 +42,8 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                         player_health += health_change #health change can be negative
             elif challenge_type == "trap":
                 print("You see potential trap!")
-                choice = input("Do you want to disarm it? (yes/no):").strip().lower()
-                if choice == "yes":
+                choice = input("Do you want to disarm it? (disarm/bypass):").strip().lower()
+                if choice == "disarm":
                     success = random.choice([True, False])
                     if success:
                         print(success_message)
