@@ -37,10 +37,8 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     success = random.choice ([True, False])
                     if success:
                         print(success_message)
-                        print(player_health)
                     else:
                         print(failure_message)
-                        print(player_health)
                         player_health += health_change #health change can be negative
             elif challenge_type == "trap":
                 print("You see potential trap!")
@@ -49,9 +47,11 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     success = random.choice([True, False])
                     if success:
                         print(success_message)
+                        print(player_health)
                     else:
                         print(failure_message)
                         player_health += health_change #health change can be negative
+                        print(player_health)
 
         player_health = max(0, player_health) #ensures health does not go below zero
         if player_health == 0:
