@@ -3,13 +3,13 @@ Coding Assignment 3
 '''
 import random
 def acquire_item(inventory,item):
-    '''Add an item to the inventory and notifies the user'''
+    #'''Add an item to the inventory and notifies the user'''
     inventory.append(item) #add an item to the inventory
     print(f"You aquired a {item}!")
     return inventory
 
 def display_inventory(inventory):
-    '''Display the user's inventory'''
+    #'''Display the user's inventory'''
     if not inventory:
         print("Your inventory is empty.")
     else:
@@ -62,7 +62,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
     return player_health, inventory
 
 def main():
-    '''Main function to run the game'''
+    #'''Main function to run the game'''
     player_health = 100
     inventory = []
 
