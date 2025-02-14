@@ -25,7 +25,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
 
         if item:
             acquire_item(inventory, item)
-            print(f"You found a {item} in the room!")
+            print("You found a gold coins in the room!")
         
         if challenge_type == "none":
             print("There doesn't seem to be a challenge in this room. You move on.")
