@@ -3,7 +3,7 @@ Coding Assignment 3
 '''
 import random
 def acquire_item(inventory,item):
-    #'''Add an item to the inventory and notifies the user'''
+    #Add an item to the inventory and notifies the user
     inventory.append(item) #add an item to the inventory
     print(f"You acquired a {item}!")
     return inventory
@@ -56,7 +56,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
             print("You are barely alive!")
             break
 
-        display_inventory(inventory)
+    display_inventory(inventory)
     print(f"You exit the dungeon with {player_health} health left.")
     return player_health, inventory
 
