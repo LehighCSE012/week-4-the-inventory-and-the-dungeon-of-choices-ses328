@@ -37,9 +37,9 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     success = random.choice ([True, False])
                     if success:
                         print(success_message)
+                        player_health += health_change #health change can be negative
                     else:
                         print(failure_message)
-                        player_health += health_change #health change can be negative
             elif challenge_type == "trap":
                 print("You see a potential trap!")
                 choice = input("Do you want to disarm it? (disarm/bypass):").strip().lower()
