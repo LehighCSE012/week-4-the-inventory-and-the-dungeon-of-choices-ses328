@@ -37,9 +37,11 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     success = random.choice ([True, False])
                     if success:
                         print(success_message)
+                        print(player_health)
                     else:
                         print(failure_message)
-                        player_health -= health_change #health change can be negative
+                        print(player_health)
+                        player_health += health_change #health change can be negative
             elif challenge_type == "trap":
                 print("You see potential trap!")
                 choice = input("Do you want to disarm it? (yes/no):").strip().lower()
@@ -49,11 +51,11 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                         print(success_message)
                     else:
                         print(failure_message)
-                        player_health -= health_change #health change can be negative
+                        player_health += health_change #health change can be negative
 
         player_health = max(0, player_health) #ensures health does not go below zero
         if player_health == 0:
-            print("You are berely alive!")
+            print("You are barely alive!")
             break
 
         display_inventory(inventory)
