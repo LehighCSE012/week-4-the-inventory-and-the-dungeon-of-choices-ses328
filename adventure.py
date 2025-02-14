@@ -39,7 +39,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                         print(success_message)
                     else:
                         print(failure_message)
-                        player_health +- health_change #health change can be negative
+                        player_health += health_change #health change can be negative
             elif challenge_type == "trap":
                 print("You see potential trap!")
                 choice = input("Do you want to disarm it? (yes/no):").strip().lower()
@@ -67,8 +67,8 @@ def main():
     inventory = []
 
     dungeon_rooms = [
-        ("A dusty old library", "key", "puzzle", ("You solved the puzzle!", "The puzzle remains unsolved.", -10)),
-        ("A narrow passage with a creaky floor", None, "trap", ("You skillfully avoid the trap!", "You triggered a trap!", -15)),
+        ("A dusty old library", "key", "puzzle", ("You solved the puzzle!", "The puzzle remains unsolved.", -5)),
+        ("A narrow passage with a creaky floor", None, "trap", ("You skillfully avoid the trap!", "You triggered a trap!", -10)),
         ("A grand hall with a shimmering pool", "healing potion", "none", None),
         ("A small room with a locked chest", "treasure", "puzzle", ("You cracked the code!", "The chest remains stubbornly locked.", -5))
     ]
